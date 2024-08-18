@@ -1,0 +1,13 @@
+tipo:Extra:19500:100.0
+tipo:Ethanol:120000:50.0
+tipo:Corriente:14500:15990.0
+tipo:JetFuelA1:250000:1100.0
+surtidor:Hector:Extra:0.0:Ethanol:0.0:Corriente:10.0:JetFuelA1:0.0
+surtidor:Amelia:Extra:0.0:Ethanol:0.0:Corriente:0.0:JetFuelA1:100.0
+surtidor:Olaya:Extra:0.0:Ethanol:0.0:Corriente:0.0:JetFuelA1:0.0
+surtidor:Olaya:Extra:0.0:Ethanol:0.0:Corriente:0.0:JetFuelA1:0.0
+empleado:Amelia:25000000
+empleado:Santiago:0
+empleado:Laura:0
+empleado:Olaya:0
+empleado:Hector:145000

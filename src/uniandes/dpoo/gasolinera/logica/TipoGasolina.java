@@ -40,14 +40,15 @@ public class TipoGasolina
     public void despacharGasolina( double cantidadSolicitada ) throws GasolinaInsuficienteException
     {
         // Verificar si hay suficiente gasolina y lanzar una excepción si no alcanza
-        if( cantidadSolicitada > cantidadDisponible )
+        if( cantidadSolicitada > cantidadDisponible ) // Está bien
         {
             GasolinaInsuficienteException ex = new GasolinaInsuficienteException( nombre, cantidadDisponible, cantidadSolicitada );
             throw ex;
         }
 
         // Reducir la cantidad disponible
-        cantidadDisponible -= cantidadSolicitada;
+        cantidadDisponible = cantidadDisponible - cantidadSolicitada; // Ponerlo más explícito
+        // NO DEBERIA DAR NEGATIVO SIN DAR LA EXCEPCIÓN
     }
 
     @Override

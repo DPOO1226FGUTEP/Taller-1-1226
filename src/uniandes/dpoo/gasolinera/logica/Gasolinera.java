@@ -27,7 +27,7 @@ public class Gasolinera
     /**
      * Un arreglo con los surtidores que hay en la gasolinera
      */
-    private Surtidor[] surtidores;
+    private Surtidor[] surtidores;	
 
     /**
      * Un mapa de los tipos de gasolina en venta: las llaves son el nombre del tipo de gasolina
@@ -172,13 +172,14 @@ public class Gasolinera
         try
         {
             // Actualizar la cantidad de gasolina disponible de ese tipo
-            tipo.despacharGasolina( cantidadSolicitada );
-            cantidadEntregada = cantidadSolicitada;
+            tipo.despacharGasolina( cantidadSolicitada ); // Cantidad solicitada es numGalones
+            cantidadEntregada = cantidadSolicitada; // Se actualiza la entrega a lo solicitado 
+            //SI NO ES INSUFICIENTE
         }
-        catch( GasolinaInsuficienteException e )
+        catch( GasolinaInsuficienteException e ) // Si es insuficiente
         {
             // System.out.println( e.getMessage( ) );
-            cantidadEntregada = e.getCantidadDisponible( );
+            cantidadEntregada = e.getCantidadDisponible( ); // Sólo entrega lo que hay
             try
             {
                 tipo.despacharGasolina( cantidadEntregada );
@@ -210,6 +211,7 @@ public class Gasolinera
     {
         TipoGasolina tipo = tiposGasolina.get( nombreTipoGasolina );
         double cantidadSolicitada = valorSolicitado / ( double )tipo.getPrecioPorGalon( );
+        // Esto me da la cantidad de galones 
 
         return venderGasolinaPorCantidad( nombreTipoGasolina, cantidadSolicitada, numeroSurtidor );
     }

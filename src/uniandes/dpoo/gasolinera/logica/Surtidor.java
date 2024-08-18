@@ -99,6 +99,8 @@ public class Surtidor
      * @param cantidadEntregada La cantidad de galones de gasolina que se le entregaron al cliente
      * @return El precio de la compra, redondeado al entero más cercano
      */
+    
+    // [FGUTEP] Esto pareciera estar lógicamente bien PERO NO
     public int venderGasolina( String nombreTipoGasolina, double cantidadEntregada )
     {
         // Calcular el precio de la gasolina vendida y registrar que el empleado tiene esa cantidad de dinero
@@ -108,7 +110,9 @@ public class Surtidor
 
         // Actualizar la cantidad de gasolina vendida en el surtidor
         double cantidadAnterior = galonesVendidos.get( nombreTipoGasolina );
-        galonesVendidos.put( nombreTipoGasolina, cantidadAnterior - cantidadEntregada );
+        galonesVendidos.put( nombreTipoGasolina, cantidadAnterior + cantidadEntregada ); 
+        // ES LOS VENDIDOS QUEREMOS SUMAR NO RESTAR
+        
 
         return precio;
     }

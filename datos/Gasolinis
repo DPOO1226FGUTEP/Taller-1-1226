@@ -1,0 +1,10 @@
+tipo:Extra:14500:100.0
+tipo:Etanol:20000:90.0
+surtidor:Juan Carlos:Extra:0.0:Etanol:0.0
+surtidor:Jesus:Extra:0.0:Etanol:-10.0
+surtidor:Jesus:Extra:0.0:Etanol:0.0
+surtidor:Juan Carlos:Extra:0.0:Etanol:0.0
+surtidor:Jose:Extra:0.0:Etanol:0.0
+empleado:Juan Carlos:0
+empleado:Jesus:200000
+empleado:Jose:0
